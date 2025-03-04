@@ -330,3 +330,145 @@ body.dark-mode #toggleDarkMode {
     }
 }
 
+/* Popup Modal */
+
+/* Modal hidden by default */
+#editPopup {
+    display: none;  /* This hides the modal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Modal background */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;  /* Make sure the modal appears on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  /* Darker background */
+    display: flex;  /* Use flex to center content */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;  /* Fade in/out */
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #2a3b44;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* Add subtle shadow for depth */
+    animation: slideUp 0.4s ease-out;  /* Add sliding effect */
+}
+
+/* Animation to slide in popup */
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Input fields and select styling */
+.popup-content input,
+.popup-content select {
+    margin: 15px 0;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #1f282c; 
+    color: #fff;
+    font-size: 1rem;
+}
+
+.popup-content input:focus,
+.popup-content select:focus {
+    outline: none;
+    border-color: #f5d5cb;  /* Highlight border on focus */
+    background-color: #333;  /* Darker focus background */
+}
+
+/* Button styling */
+.popup-content button {
+    padding: 12px 25px;
+    margin: 10px 5px;
+    background-color: #f5d5cb;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Button hover effect */
+.popup-content button:hover {
+    background-color: #e6bfb2;  /* Light hover effect */
+}
+
+/* Close button style */
+.close {
+    font-size: 30px;
+    color: #f5d5cb;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;     /* Position close button 10px from the top */
+    right: 10px;   /* Position close button 10px from the right */
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #e6bfb2;  /* Change color on hover */
+}
+
+/* Cancel button styling */
+.cancelEdit {
+    padding: 12px 25px;
+    margin: 10px 5px;
+    background-color: #f5d5cb;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cancelEdit:hover {
+    background-color: #e6bfb2;  /* Light hover effect */
+}
+
+
+/* Edit button (pencil) */
+.edit {
+    background: none;  
+    border: none;      
+    cursor: pointer;   
+    font-size: 1.3rem;  
+    color: inherit;     
+    display: inline-flex; 
+    align-items: center;  
+    padding: 0;         
+    margin: 0;          
+    transition: 0.3s;    
+    transform: rotate(90deg); 
+}
+
