@@ -26,7 +26,7 @@ cancelEditButton.addEventListener('click', () => {
 
 // Fetch tasks from the server (API)
 async function fetchTasks() {
-    const response = await fetch('http://localhost:5501/tasks');
+    const response = await fetch('http://localhost:5502/tasks');
     const data = await response.json();
     renderTasks(data);
 }
@@ -74,7 +74,7 @@ addTaskButton.addEventListener('click', async () => {
             completed: false
         };
 
-        const response = await fetch('http://localhost:5501/tasks', {
+        const response = await fetch('http://localhost:5502/tasks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ addTaskButton.addEventListener('click', async () => {
 
 // Mark task as completed
 async function markCompleted(id) {
-    const response = await fetch(`http://localhost:5501/tasks/${id}`, {
+    const response = await fetch(`http://localhost:5502/tasks/${id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'
@@ -104,7 +104,7 @@ async function markCompleted(id) {
 
 // Edit task
 function editTask(id) {
-    fetch(`http://localhost:5501/tasks/${id}`)
+    fetch(`http://localhost:5502/tasks/${id}`)
         .then(response => response.json())
         .then(task => {
             editDescriptionInput.value = task.description;
@@ -120,7 +120,7 @@ function editTask(id) {
                     dueDate: editDueDateInput.value
                 };
 
-                fetch(`http://localhost:5500/tasks/${id}`, {
+                fetch(`http://localhost:5502/tasks/${id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -138,7 +138,7 @@ function editTask(id) {
 
 // Delete task
 async function deleteTask(id) {
-    const response = await fetch(`http://localhost:5501/tasks/${id}`, {
+    const response = await fetch(`http://localhost:5502/tasks/${id}`, {
         method: 'DELETE'
     });
     const data = await response.json();
@@ -147,7 +147,7 @@ async function deleteTask(id) {
 
 // Clear all tasks
 clearAllButton.addEventListener('click', async () => {
-    await fetch('http://localhost:5501/tasks', { method: 'DELETE' });
+    await fetch('http://localhost:5502/tasks', { method: 'DELETE' });
     renderTasks([]);
 });
 
