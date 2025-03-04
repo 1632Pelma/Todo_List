@@ -9,7 +9,6 @@ server.use(middlewares);
 // Set up the API endpoint using JSON Server router
 server.use('/api', router); 
 
-const PORT = process.env.PORT || 5500; 
 const PORT = process.env.PORT || 5501; 
 server.listen(PORT, () => {
     console.log(`JSON Server is running on http://localhost:${PORT}`);
