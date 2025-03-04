@@ -128,3 +128,50 @@ li {
 .delete {
     margin-left: 10px; /* Keeps delete button next to check button */
 }
+
+
+#modeIcon {
+    font-size: 1.5rem;
+}
+/* Move the dark mode toggle button to the top-right */
+#toggleDarkMode {
+    position: fixed; 
+    top: 20px;        
+    right: 20px;      
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #f5d5cb;
+    transition: color 0.3s ease;
+    z-index: 100;    
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #121212; 
+    color: #e0e0e0; 
+}
+
+/* Dark mode input field */
+body.dark-mode #taskInput {
+    background: #333; 
+    color: #e0e0e0; 
+}
+
+/* Dark mode button */
+body.dark-mode #addTask {
+    background: #3e3e3e; 
+    color: #fff; 
+}
+
+
+/* Dark mode task items */
+body.dark-mode li {
+    background: #333; 
+    color: #e0e0e0; 
+}
+
+body.dark-mode #toggleDarkMode {
+    color: #e0e0e0;
+}
