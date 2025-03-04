@@ -23,3 +23,45 @@ body {
     width: 90%;
     max-width: 400px;
 }
+
+/* Flex container for input and button */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* Input field */
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px ;
+    background: #0d1117;
+    color: #fff;
+    outline: none;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease; 
+}
+/* Button */
+#addTask {
+    width: auto;
+    padding: 12px 20px; 
+    background: #f5d5cb;
+    color: #000;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background 0.3s ease, color 0.3s ease; 
+}
+
+#addTask:hover {
+    background: #e6bfb2;
+}
+#addTask:focus, #toggleDarkMode:focus {
+    outline: 3px solid #f5d5cb;
+}
