@@ -175,3 +175,74 @@ body.dark-mode li {
 body.dark-mode #toggleDarkMode {
     color: #e0e0e0;
 }
+/* Bottom Controls Container */
+.bottom-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between; /* This will distribute space between the buttons */
+    width: calc(100% - 40px); /* Ensure the container takes full width minus the left and right padding */
+}
+
+/* Clear All Tasks Button */
+#clearAll {
+    padding: 12px 20px;
+    background: #2a3b44;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+
+/* Social Links Button */
+#socialBtn {
+    padding: 12px 20px;
+    background: #2a3b44;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+/* Social Icons Container (Hidden by Default) */
+.social-links {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(42, 59, 68, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 120px;
+}
+
+/* Show Icons on Hover */
+.social-container:hover .social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Social Links Styling */
+.social-links a {
+    font-size: 1.8rem;
+    color: #f5d5cb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6b6b;
+}
