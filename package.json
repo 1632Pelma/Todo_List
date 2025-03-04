@@ -1,0 +1,27 @@
+{
+  "name": "todo_list",
+  "version": "1.0.0",
+  "description": "A feature-rich To-Do List application built with technologies used, HTML, CSS, JavaScript, Node. This app allows users to add, remove, and mark tasks as completed. Additional features include setting task priority levels, editing tasks, adding due dates, and more, providing an enhanced and customizable task management experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1632Pelma/Todo_List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1632Pelma/Todo_List/issues"
+  },
+  "homepage": "https://github.com/1632Pelma/Todo_List#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "json-server": "^1.0.0-beta.3"
+  }
+}
