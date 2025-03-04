@@ -65,3 +65,26 @@ body {
 #addTask:focus, #toggleDarkMode:focus {
     outline: 3px solid #f5d5cb;
 }
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+
+/* Task items */
+li {
+    background: #0d1117;
+    padding: 12px;
+    border-radius: 25px;
+    display: flex; /* Flex container for aligning elements */
+    justify-content: space-between; /* Distribute space between content */
+    align-items: center; /* Align items in the center vertically */
+    margin-top: 10px;
+    color: #f5d5cb;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    gap: 10px; /* Adds space between text and buttons */
+}
