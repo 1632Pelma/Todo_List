@@ -1,25 +1,18 @@
 {
-    "tasks": [
-      {
-        "id": "1",
-        "description": "Example Task 1",
-        "priority": "low",
-        "dueDate": "2025-03-10",
-        "completed": false
-      },
-      {
-        "id": "ee5c",
-        "description": "go to gym",
-        "priority": "low",
-        "dueDate": "",
-        "completed": false
-      },
-      {
-        "id": "4866",
-        "description": "go to work",
-        "priority": "low",
-        "dueDate": "",
-        "completed": false
-      }
-    ]
-  }
+  "tasks": [
+    {
+      "id": "ee5c",
+      "description": "go to gym",
+      "priority": "low",
+      "dueDate": "",
+      "completed": false
+    },
+    {
+      "id": "4866",
+      "description": "go to work",
+      "priority": "low",
+      "dueDate": "",
+      "completed": false
+    }
+  ]
+}
