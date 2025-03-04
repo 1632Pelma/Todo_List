@@ -472,3 +472,42 @@ body.dark-mode #toggleDarkMode {
     transform: rotate(90deg); 
 }
 
+/* Task action buttons - Align check icon to the right */
+.check {
+    margin-left: auto; /* Pushes check button to the right */
+}
+
+.delete {
+    margin-left: 10px; /* Keeps delete button next to check button */
+}
+
+/* Task action buttons */
+.check, .delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: inherit;
+    transition: 0.3s;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.check:hover, .delete:hover {
+    background: rgba(245, 213, 203, 0.4);
+}
+
+/* Completed task */
+.completed {
+    text-decoration: line-through;
+    background: #2c2f36; 
+}
+
+.check:hover, .delete:hover {
+    background: rgba(245, 213, 203, 0.2);
+}
+
+/* If no due date, hide the text */
+.no-due-date {
+    display: none; /* Hide if no due date */
+}
