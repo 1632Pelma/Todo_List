@@ -88,3 +88,43 @@ li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     gap: 10px; /* Adds space between text and buttons */
 }
+
+/* Task description and priority circle container */
+.task-text {
+    display: flex; /* Ensure task text and priority circle are inline */
+    align-items: center; /* Align items (text + circle) in the center vertically */
+    flex: 1;
+    word-break: break-word; /* Break long words */
+    text-align: left; /* Align text to the left */
+}
+
+/* Priority circle styles */
+.priority-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 10px; /* Space between the text and the circle */
+    display: inline-block;
+}
+
+/* Color coding for the priority circle */
+.priority-low {
+    background-color: green;
+}
+
+.priority-medium {
+    background-color: yellow;
+}
+
+.priority-high {
+    background-color: red;
+}
+
+/* Task action buttons - Align check icon to the right */
+.check {
+    margin-left: auto; /* Pushes check button to the right */
+}
+
+.delete {
+    margin-left: 10px; /* Keeps delete button next to check button */
+}
