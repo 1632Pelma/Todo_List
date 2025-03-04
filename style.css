@@ -3,3 +3,23 @@ h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: inherit; }
+
+    /* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background:  #2a3b44; 
+    color: #f5d5cb; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 400px;
+}
