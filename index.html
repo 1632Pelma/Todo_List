@@ -15,5 +15,23 @@
                 <button id="addTask">Add</button>
             </div>
             <ul id="taskList"></ul>
+            <div id="editPopup" class="modal">
+                <div class="modal-content"> 
+                    <span id="cancelEdit" class="close">&times;</span>
+                    <h2>Edit Task</h2>
+                    <input type="text" id="editDescription" placeholder="Description" />
+                    <select id="editPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <input type="date" id="editDueDate" />
+                    <button id="saveChanges">Save Changes</button>
+                    <button id="cancelEdit">Cancel</button>
+            
+            
+                </div>
+            </div>
+           </div> 
     </body>
 </html>
