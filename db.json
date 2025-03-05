@@ -1,25 +1,18 @@
 {
   "tasks": [
     {
-      "description": "Go to work",
-      "priority": "",
-      "dueDate": "",
-      "completed": true,
-      "id": 4
-    },
-    {
-      "description": "ediy",
-      "priority": "",
-      "dueDate": "",
-      "completed": false,
-      "id": 5
-    },
-    {
-      "description": "Edit Memo",
-      "priority": "",
+      "description": "Edit Memorandum",
+      "priority": "high",
       "dueDate": "",
       "completed": false,
       "id": 6
+    },
+    {
+      "description": "add task",
+      "priority": "",
+      "dueDate": "",
+      "completed": false,
+      "id": 7
     }
   ]
 }
