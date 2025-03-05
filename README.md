@@ -18,7 +18,7 @@ This Todo List project is a simple web application that allows users to create, 
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: JSON Server (mock API)
+- **Backend**: JSON Server 
 - **Libraries**: FontAwesome (for icons)
 
 ## Installation
