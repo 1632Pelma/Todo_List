@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Todo List</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">   
-    </head>
-    <body>
-        <div class="container">
-            <h1>Todo List</h1>
-            <div class="input-container">
-                <input type="text" id="taskInput" placeholder="Add a task.">
-                <button id="addTask">Add</button>
-            </div>
-            <ul id="taskList"></ul>
-            <div id="editPopup" class="modal">
-                <div class="modal-content"> 
-                    <span id="cancelEdit" class="close">&times;</span>
-                    <h2>Edit Task</h2>
-                    <input type="text" id="editDescription" placeholder="Description" />
-                    <select id="editPriority">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                    <input type="date" id="editDueDate" />
-                    <button id="saveChanges">Save Changes</button>
-                    <button id="cancelEdit">Cancel</button>
-            
-            
-                </div>
-            </div>
-           </div> 
-           
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <p id="dateTime"></p>
+
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a task.">
+            <button id="addTask">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+
+<!-- Edit Task Modal -->
+<div id="editPopup" class="modal">
+    <div class="modal-content"> 
+        <span id="cancelEdit" class="close">&times;</span>
+        <h2>Edit Task</h2>
+        <input type="text" id="editDescription" placeholder="Description" />
+        <select id="editPriority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <input type="date" id="editDueDate" />
+        <button id="saveChanges">Save Changes</button>
+        <button id="cancelEdit">Cancel</button>
+
+
+    </div>
+</div>
+
+</div>
+
+
         <!-- Dark mode toggle button with icon -->
         <button id="toggleDarkMode">
             <i class="fas fa-moon" id="modeIcon"></i> 
         </button>
+        
+    </div>
+    <!-- Bottom Controls (Clear All Tasks + Social Links Button) -->
+    <div class="bottom-controls">
+        <button id="clearAll">Clear All 🗑</button>
 
-        <div class="bottom-controls">
-            <button id="clearAll">Clear All 🗑</button>
-    
-            <div class="social-container">
-                <button id="socialBtn">
-                    <i class="fas fa-share-alt"></i> <!-- Social icon -->
-                </button>
-                <div class="social-links">
-                    <a href="https://github.com/1632Pelma" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://za.linkedin.com/in/pelma-monere-mahlobogoane-62a296280" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
+        <div class="social-container">
+            <button id="socialBtn">
+                <i class="fas fa-share-alt"></i> <!-- Social icon -->
+            </button>
+            <div class="social-links">
+                <a href="https://github.com/1632Pelma" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://za.linkedin.com/in/pelma-monere-mahlobogoane-62a296280" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+
+   <script src="script.js"></script>
+</body>
 </html>
