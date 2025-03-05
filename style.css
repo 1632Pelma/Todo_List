@@ -7,7 +7,7 @@ h1 {
     
 body {
     font-family: 'Poppins', sans-serif;
-    background:  #070029 ;
+    background:  #d8ebfd ;
     color: white; 
     text-align: center;
     display: flex;
@@ -637,82 +637,4 @@ body.dark-mode button.cancel {
 /* If no due date, hide the text */
 .no-due-date {
     display: none; 
-}
-/* Medium screen devices (tablets, landscape mode) */
-@media (max-width: 1024px) {
-    .container {
-        width: 80%;
-        max-width: 500px;
-    }
-
-    .bottom-controls {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bottom-controls button {
-        width: 100%; /* Stacks the buttons vertically */
-        margin-bottom: 10px;
-    }
-
-    .popup-content {
-        width: 80%;
-        padding: 20px;
-    }
-
-    .popup-content input {
-        padding: 12px;
-        margin: 8px 0;
-    }
-}
-
-/* Small screen devices (mobile phones) */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        max-width: 400px;
-    }
-
-    .bottom-controls button {
-        width: 100%; /* Full-width buttons on mobile */
-        margin-bottom: 15px;
-    }
-
-    button {
-        padding: 10px 15px;
-        font-size: 0.9rem; /* Slightly smaller font size */
-    }
-
-    .popup-content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .popup-content input {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-}
-
-/* Extra small screen devices (portrait phones) */
-@media (max-width: 400px) {
-    .container {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .bottom-controls button {
-        width: 100%; /* Full-width buttons */
-        padding: 10px 15px;
-    }
-
-    .popup-content {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .popup-content input {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
 }
