@@ -1,14 +1,14 @@
-/* Heading */
+
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: inherit; }
 
-    /* General styling */
+    
 body {
     font-family: 'Poppins', sans-serif;
-    background:  #2a3b44; 
-    color: #f5d5cb; 
+    background:  #f0f8ff ;
+    color: white; 
     text-align: center;
     display: flex;
     justify-content: center;
@@ -18,38 +18,46 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Main container */
 .container {
     width: 90%;
     max-width: 400px;
+    background-color: #FDE2E2; 
+    border-radius: 15px; 
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
-/* Flex container for input and button */
+.container:hover {
+    background-color: #F18D8D; /* Darker pink on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
 .input-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-/* Input field */
+
+
+
+/* Task Input */
 #taskInput {
     flex: 1;
     padding: 12px;
     font-size: 1rem;
-    border: none;
-    border-radius: 25px ;
-    background: #0d1117;
-    color: #fff;
-    outline: none;
-    text-align: center;
-    transition: background 0.3s ease, color 0.3s ease; 
+    border: 2px solid #a5c8f0; 
+    border-radius: 25px;
+    background: #fff; /
 }
-/* Button */
 #addTask {
     width: auto;
     padding: 12px 20px; 
-    background: #f5d5cb;
-    color: #000;
+    background: #f07dbc;
+    color: white;
     font-size: 1rem;
     border: none;
     border-radius: 25px;
@@ -60,42 +68,42 @@ body {
 }
 
 #addTask:hover {
-    background: #e6bfb2;
+    background: #4d0be6;
 }
 #addTask:focus, #toggleDarkMode:focus {
-    outline: 3px solid #f5d5cb;
+    outline: 3px solid #b3d9ff;
 }
 
 /* Task List */
 ul {
     list-style: none;
     padding: 0;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 
 /* Task items */
 li {
-    background: #0d1117;
-    padding: 12px;
+    background: #a5c8f0;
+    padding: 10px;
     border-radius: 25px;
-    display: flex; /* Flex container for aligning elements */
-    justify-content: space-between; /* Distribute space between content */
-    align-items: center; /* Align items in the center vertically */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     margin-top: 10px;
-    color: #f5d5cb;
+    color: #333;
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    gap: 10px; /* Adds space between text and buttons */
+    gap: 8px; 
 }
 
-/* Task description and priority circle container */
+
 .task-text {
-    display: flex; /* Ensure task text and priority circle are inline */
-    align-items: center; /* Align items (text + circle) in the center vertically */
+    display: flex; 
+    align-items: center; 
     flex: 1;
-    word-break: break-word; /* Break long words */
-    text-align: left; /* Align text to the left */
+    word-break: break-word; 
+    text-align: left; 
 }
 
 /* Priority circle styles */
@@ -120,20 +128,20 @@ li {
     background-color: red;
 }
 
-/* Task action buttons - Align check icon to the right */
+
 .check {
-    margin-left: auto; /* Pushes check button to the right */
+    margin-left: auto; 
 }
 
 .delete {
-    margin-left: 10px; /* Keeps delete button next to check button */
+    margin-left: 10px; 
 }
 
 
 #modeIcon {
     font-size: 1.5rem;
 }
-/* Move the dark mode toggle button to the top-right */
+
 #toggleDarkMode {
     position: fixed; 
     top: 20px;        
@@ -142,7 +150,7 @@ li {
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #f5d5cb;
+    color: #F18D8D;
     transition: color 0.3s ease;
     z-index: 100;    
 }
@@ -175,20 +183,21 @@ body.dark-mode li {
 body.dark-mode #toggleDarkMode {
     color: #e0e0e0;
 }
+
 /* Bottom Controls Container */
 .bottom-controls {
     position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
-    justify-content: space-between; /* This will distribute space between the buttons */
-    width: calc(100% - 40px); /* Ensure the container takes full width minus the left and right padding */
+    justify-content: space-between; 
+    width: calc(100% - 40px); 
 }
 
 /* Clear All Tasks Button */
 #clearAll {
     padding: 12px 20px;
-    background: #2a3b44;
+    background: #F18D8D;
     color: white;
     font-size: 1rem;
     border: none;
@@ -198,54 +207,76 @@ body.dark-mode #toggleDarkMode {
     transition: background 0.3s ease;
 }
 
-
-/* Social Links Button */
-#socialBtn {
-    padding: 12px 20px;
-    background: #2a3b44;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    position: relative;
+/* Social Container */
+.social-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    z-index: 1000;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Social Icons Container (Hidden by Default) */
+/* Social Links Container (Initially Hidden) */
 .social-links {
     display: none;
     position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(42, 59, 68, 0.9);
+    bottom: 50%;  
+    right: 100%; 
+    transform: translateX(50px); 
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
     text-align: center;
     width: 120px;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    opacity: 0;  
 }
 
-/* Show Icons on Hover */
-.social-container:hover .social-links {
+
+.social-container.active .social-links {
     display: flex;
     gap: 10px;
     justify-content: center;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* Social Links Styling */
 .social-links a {
     font-size: 1.8rem;
-    color: #f5d5cb;
+    color: #F18D8D;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
+/* Hover Effect on Links */
 .social-links a:hover {
-    color: #ff6b6b;
+    color: #e00f0f;
 }
+
+/* Social Button Style */
+#socialBtn {
+    background-color: #F18D8D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+#socialBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Active state of social button */
+.social-container.active #socialBtn {
+    transform: rotate(180deg); 
+}
+
 
 /* Responsive design */
 @media (min-width: 1024px) {
@@ -257,7 +288,7 @@ body.dark-mode #toggleDarkMode {
         background: #e0e0e0(13, 17, 23, 0.8); 
         border-radius: 15px;
         box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px); /* Glass effect */
+        backdrop-filter: blur(10px); 
     }
 
     .container::before {
@@ -270,7 +301,7 @@ body.dark-mode #toggleDarkMode {
         height: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 50px solid #ffff(13, 17, 23, 0.8); /* Triangle with the same transparency */
+        border-bottom: 50px solid #ffff(13, 17, 23, 0.8); 
     }
 }
 
@@ -334,38 +365,38 @@ body.dark-mode #toggleDarkMode {
 
 /* Modal hidden by default */
 #editPopup {
-    display: none;  /* This hides the modal */
+    display: none;  
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
-    z-index: 1000; /* Ensure it's on top of other content */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
 }
 
 /* Modal background */
 .popup {
     display: none;
     position: fixed;
-    z-index: 1000;  /* Make sure the modal appears on top */
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);  /* Darker background */
-    display: flex;  /* Use flex to center content */
+    background-color: rgba(0, 0, 0, 0.7);  
+    display: flex;  
     justify-content: center;
     align-items: center;
-    opacity: 0;  /* Initially hidden */
-    transition: opacity 0.3s ease-in-out;  /* Fade in/out */
+    opacity: 0;  
+    transition: opacity 0.3s ease-in-out;  
 }
 
 /* Popup content */
 .popup-content {
-    background-color: #2a3b44;
+    background-color: #FDE2E2;  /* Lighter background color (matching your theme) */
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 20px;  /* More rounded corners */
     width: 90%;
     max-width: 450px;
     text-align: left;
@@ -385,75 +416,51 @@ body.dark-mode #toggleDarkMode {
     }
 }
 
-/* Input fields and select styling */
-.popup-content input,
-.popup-content select {
-    margin: 15px 0;
-    padding: 12px;
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #1f282c; 
-    color: #fff;
-    font-size: 1rem;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
 }
 
-.popup-content input:focus,
-.popup-content select:focus {
-    outline: none;
-    border-color: #f5d5cb;  /* Highlight border on focus */
-    background-color: #333;  /* Darker focus background */
+/* Modal content styling */
+.modal-content {
+    background-color: #FDE2E2;  /* Lighter background color (matching your theme) */
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 20px;  /* More rounded corners */
+    width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button styling */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Button styling */
-.popup-content button {
-    padding: 12px 25px;
-    margin: 10px 5px;
-    background-color: #f5d5cb;
-    color: #000;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
+button {
+    padding: 12px;
+    margin: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    border-radius: 15px;  /* Slightly rounded corners for buttons */
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
 /* Button hover effect */
-.popup-content button:hover {
-    background-color: #e6bfb2;  /* Light hover effect */
-}
-
-/* Close button style */
-.close {
-    font-size: 30px;
-    color: #f5d5cb;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;     /* Position close button 10px from the top */
-    right: 10px;   /* Position close button 10px from the right */
-    transition: color 0.3s ease;
-}
-
-.close:hover {
-    color: #e6bfb2;  /* Change color on hover */
-}
-
-/* Cancel button styling */
-.cancelEdit {
-    padding: 12px 25px;
-    margin: 10px 5px;
-    background-color: #f5d5cb;
-    color: #000;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.cancelEdit:hover {
-    background-color: #e6bfb2;  /* Light hover effect */
+button:hover {
+    background-color: #F07DBC;  /* Darker pink background when hovering over button */
 }
 
 
@@ -500,7 +507,8 @@ body.dark-mode #toggleDarkMode {
 /* Completed task */
 .completed {
     text-decoration: line-through;
-    background: #2c2f36; 
+    color : white;
+    
 }
 
 .check:hover, .delete:hover {
@@ -509,5 +517,5 @@ body.dark-mode #toggleDarkMode {
 
 /* If no due date, hide the text */
 .no-due-date {
-    display: none; /* Hide if no due date */
+    display: none; 
 }
