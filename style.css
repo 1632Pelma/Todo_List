@@ -7,7 +7,7 @@ h1 {
     
 body {
     font-family: 'Poppins', sans-serif;
-    background:  #f0f8ff ;
+    background:  #d8ebfd ;
     color: white; 
     text-align: center;
     display: flex;
@@ -21,7 +21,7 @@ body {
 .container {
     width: 90%;
     max-width: 400px;
-    background-color: #FDE2E2; 
+    background-color:#d4006e; 
     border-radius: 15px; 
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
@@ -29,7 +29,7 @@ body {
 }
 
 .container:hover {
-    background-color: #F18D8D; /* Darker pink on hover */
+    background-color: #eb0638; /* Darker pink on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
@@ -56,7 +56,7 @@ body {
 #addTask {
     width: auto;
     padding: 12px 20px; 
-    background: #f07dbc;
+    background: #2d03ec;
     color: white;
     font-size: 1rem;
     border: none;
@@ -68,7 +68,7 @@ body {
 }
 
 #addTask:hover {
-    background: #4d0be6;
+    background: #506ec2f6;
 }
 #addTask:focus, #toggleDarkMode:focus {
     outline: 3px solid #b3d9ff;
@@ -150,31 +150,63 @@ li {
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #F18D8D;
+    color: #d4006e;
     transition: color 0.3s ease;
     z-index: 100;    
 }
 
+/* Hover effect for the dark mode toggle button */
+#toggleDarkMode:hover {
+    color: #eb0638;
+    transform: scale(1.1);
+}
+ 
 /* Dark mode styles */
 body.dark-mode {
     background: #121212; 
     color: #e0e0e0; 
 }
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #d4006e; /* Default background color */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+}
 
-/* Dark mode input field */
+/* Dark mode container styles */
+body.dark-mode .container {
+    background-color: #1e1e1e; 
+    color: #e0e0e0; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /
+}
+
+/* Hover effect for the container */
+body.dark-mode .container:hover {
+    background-color: #333; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); 
+}
+
+
 body.dark-mode #taskInput {
     background: #333; 
     color: #e0e0e0; 
 }
 
-/* Dark mode button */
 body.dark-mode #addTask {
-    background: #3e3e3e; 
+    background: #555; 
     color: #fff; 
 }
 
+body.dark-mode #addTask:hover {
+    background: #777; 
+}
 
-/* Dark mode task items */
+
 body.dark-mode li {
     background: #333; 
     color: #e0e0e0; 
@@ -184,7 +216,50 @@ body.dark-mode #toggleDarkMode {
     color: #e0e0e0;
 }
 
-/* Bottom Controls Container */
+body.dark-mode #clearAll {
+    background: #444; 
+    color: #fff; 
+}
+
+body.dark-mode #clearAll:hover {
+    background: #666; 
+}
+
+
+body.dark-mode li {
+    background: #333; 
+    color: #e0e0e0; 
+}
+
+
+body.dark-mode #toggleDarkMode {
+    color: #e0e0e0; /
+}
+
+/* Dark mode toggle hover effect */
+body.dark-mode #toggleDarkMode:hover {
+    color: #b3b3b3; 
+}
+
+
+body.dark-mode #socialBtn {
+    background-color: #444; 
+    color: white; 
+}
+
+body.dark-mode #socialBtn:hover {
+    background-color: #666; 
+}
+
+
+body.dark-mode .popup-content button {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode .popup-content button:hover {
+    background-color: #777;
+}
 .bottom-controls {
     position: absolute;
     bottom: 20px;
@@ -197,7 +272,7 @@ body.dark-mode #toggleDarkMode {
 /* Clear All Tasks Button */
 #clearAll {
     padding: 12px 20px;
-    background: #F18D8D;
+    background: #d4006e;
     color: white;
     font-size: 1rem;
     border: none;
@@ -205,6 +280,11 @@ body.dark-mode #toggleDarkMode {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s ease;
+}
+/* Hover effect for the Clear All button */
+#clearAll:hover {
+    background: #eb0638;
+    transform: scale(1.05);
 }
 
 /* Social Container */
@@ -246,19 +326,19 @@ body.dark-mode #toggleDarkMode {
 /* Social Links Styling */
 .social-links a {
     font-size: 1.8rem;
-    color: #F18D8D;
+    color: #d4006e;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 /* Hover Effect on Links */
 .social-links a:hover {
-    color: #e00f0f;
+    color: #eb0638;
 }
 
 /* Social Button Style */
 #socialBtn {
-    background-color: #F18D8D;
+    background-color: #d4006e;
     color: white;
     border: none;
     border-radius: 50%;
@@ -361,7 +441,7 @@ body.dark-mode #toggleDarkMode {
     }
 }
 
-/* Popup Modal */
+
 
 /* Modal hidden by default */
 #editPopup {
@@ -394,9 +474,9 @@ body.dark-mode #toggleDarkMode {
 
 /* Popup content */
 .popup-content {
-    background-color: #FDE2E2;  /* Lighter background color (matching your theme) */
+    background-color: #2a3b44;
     padding: 25px;
-    border-radius: 20px;  /* More rounded corners */
+    border-radius: 15px; /* More rounded corners */
     width: 90%;
     max-width: 450px;
     text-align: left;
@@ -429,17 +509,16 @@ body.dark-mode #toggleDarkMode {
     padding-top: 60px;
 }
 
-/* Modal content styling */
 .modal-content {
-    background-color: #FDE2E2;  /* Lighter background color (matching your theme) */
+    background-color: #fff;
     margin: 5% auto;
-    padding: 25px;
-    border-radius: 20px;  /* More rounded corners */
+    padding: 20px;
+    border-radius: 15px; /* More rounded corners for modal content */
     width: 400px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Close button styling */
+/* Close button */
 .close {
     position: absolute;
     top: 10px;
@@ -448,19 +527,59 @@ body.dark-mode #toggleDarkMode {
     cursor: pointer;
 }
 
-/* Button styling */
+/* General button styles (round borders and padding) */
 button {
-    padding: 12px;
-    margin: 5px;
+    padding: 12px 20px; 
+    margin: 10px 5px;
     cursor: pointer;
-    border-radius: 15px;  /* Slightly rounded corners for buttons */
-    border: none;
-    transition: background-color 0.3s ease;
+    border-radius: 25px; 
+    border: none; 
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Button hover effect */
-button:hover {
-    background-color: #F07DBC;  /* Darker pink background when hovering over button */
+
+button.save-changes {
+    background-color: #4CAF50; 
+    color: white;
+    font-weight: bold;
+}
+
+button.save-changes:hover {
+    background-color: #45a049; 
+}
+
+
+button.cancel {
+    background-color: #f44336; 
+    color: white;
+    font-weight: bold;
+}
+
+button.cancel:hover {
+    background-color: #da190b; 
+}
+
+/* Style for input fields inside modal */
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+
+body.dark-mode .popup-content {
+    background-color: #333; 
+    color: #e0e0e0; 
+}
+
+body.dark-mode button.save-changes {
+    background-color: #3e8e41; 
+}
+
+body.dark-mode button.cancel {
+    background-color: #d32f2f; 
 }
 
 
@@ -518,4 +637,82 @@ button:hover {
 /* If no due date, hide the text */
 .no-due-date {
     display: none; 
+}
+/* Medium screen devices (tablets, landscape mode) */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .bottom-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-controls button {
+        width: 100%; /* Stacks the buttons vertically */
+        margin-bottom: 10px;
+    }
+
+    .popup-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .popup-content input {
+        padding: 12px;
+        margin: 8px 0;
+    }
+}
+
+/* Small screen devices (mobile phones) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .bottom-controls button {
+        width: 100%; /* Full-width buttons on mobile */
+        margin-bottom: 15px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .popup-content input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Extra small screen devices (portrait phones) */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .bottom-controls button {
+        width: 100%; /* Full-width buttons */
+        padding: 10px 15px;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .popup-content input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }
