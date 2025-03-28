@@ -209,3 +209,138 @@ h1 {
     border: 2px dashed #3498db;
     background-color: #f0f8ff;
 }
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .task-input-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    #taskInput, 
+    #prioritySelect, 
+    #addTaskBtn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .kanban-board {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .kanban-column {
+        min-height: 250px;
+        padding: 15px;
+    }
+
+    .task-list {
+        min-height: 200px;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .task-actions {
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    .task-actions button {
+        flex-grow: 1;
+        margin: 0 2px;
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .kanban-board {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .kanban-column {
+        min-height: 300px;
+    }
+
+    .task-input-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #taskInput {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    #prioritySelect, 
+    #addTaskBtn {
+        flex-basis: auto;
+    }
+}
+
+
+@media screen and (min-width: 901px) {
+    .container {
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    .kanban-board {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .kanban-column {
+        flex: 1;
+        min-height: 500px;
+    }
+}
+
+
+@media (pointer: coarse) {
+    #addTaskBtn, 
+    .complete-btn, 
+    .delete-btn {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 10px 15px;
+    }
+
+    .task-actions {
+        gap: 10px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
