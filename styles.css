@@ -113,3 +113,49 @@ h1 {
     color: #2c3e50;
     font-weight: 600;
 }
+.task-list {
+    min-height: 350px; 
+    border: 2px dashed #bdc3c7;
+    border-radius: 8px;
+    padding: 12px; 
+    background-color: white;
+}
+
+.task-item {
+    
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.task-item.low-priority { 
+    border-left: 5px solid #2ecc71; 
+    background-color: #eafaf1;
+}
+
+.task-item.medium-priority { 
+    border-left: 5px solid #f39c12; 
+    background-color: #fef5e7;
+}
+
+.task-item.high-priority { 
+    border-left: 5px solid #e74c3c; 
+    background-color: #fdedec;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
