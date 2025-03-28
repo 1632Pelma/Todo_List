@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-   
+    <body>
+        <div class="container">
+            <h1>To-Do List</h1>
+            
+            <div class="task-input-container">
+                <input type="text" id="taskInput" placeholder="Enter a new task">
+                <select id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+    
+            <div class="kanban-board">
+                <div class="kanban-column" id="todoColumn">
+                    <h2>To Do</h2>
+                    <div class="task-list" id="todoList"></div>
+                </div>
+                <div class="kanban-column" id="inProgressColumn">
+                    <h2>In Progress</h2>
+                    <div class="task-list" id="inProgressList"></div>
+                </div>
+                <div class="kanban-column" id="completedColumn">
+                    <h2>Completed</h2>
+                    <div class="task-list" id="completedList"></div>
+                </div>
+            </div>
+        </div>
+    </body>
 </head>
 </html>
